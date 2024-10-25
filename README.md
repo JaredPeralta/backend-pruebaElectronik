@@ -151,3 +151,15 @@ npm test
 Puedes importar la colección de Postman desde el siguiente archivo:
 [Prueba-Electronik.postman_collection.json](https://github.com/user-attachments/files/17527574/Prueba-Electronik.postman_collection.json)
 
+## Api en produccion
+Se puede probar el api en entorno de produccion con el siguiente enlace:
+
+```bash
+https://boiling-reaches-39655-8ef592acfacd.herokuapp.com/
+```
+
+Para probarlo con Postman solo se remplaza el http://localhost:3001 por ejemplo 
+```bash
+http://localhost:3001/api/images/favorites 
+https://boiling-reaches-39655-8ef592acfacd.herokuapp.com/api/images/favorites 
+```
