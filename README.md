@@ -107,7 +107,6 @@ Para todas las rutas protegidas, se requiere incluir el token JWT en los headers
 ### Requerimientos Previos
 ```
 - Node.js (v14 o superior)
-- PostgreSQL (v12 o superior)
 ```
 ### Configuración del Entorno
 
@@ -137,4 +136,15 @@ Para todas las rutas protegidas, se requiere incluir el token JWT en los headers
 
 ```
    ts-node app.ts
+```
+
+### 6. **Testing**
+
+```markdown
+## Testing
+
+El proyecto incluye pruebas unitarias para las rutas principales. Para ejecutarlas, puedes usar el siguiente comando:
+
+```bash
+npm test
 ```
