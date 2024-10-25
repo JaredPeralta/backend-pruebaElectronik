@@ -118,6 +118,23 @@ Para todas las rutas protegidas, se requiere incluir el token JWT en los headers
    DB_USER=
    DB_PASSWORD=
    DB_NAME=
-   JWT_SECRET=
-  ```
+   JWT_SECRET=```
 
+### Pasos para Desplegar
+
+1. Clonar el repositorio:
+```
+- (https://github.com/JaredPeralta/backend-pruebaElectronik)
+```
+
+2. Instalar las dependencias:
+
+```
+   npm install
+```
+  
+4. Iniciar el servidor:
+
+```
+   ts-node app.ts
+```
