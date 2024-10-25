@@ -114,8 +114,10 @@ Para todas las rutas protegidas, se requiere incluir el token JWT en los headers
 1. Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
    ```env
-   PORT=5000
-   DATABASE_URL=postgres://usuario:contraseña@localhost:5432/nombre_bd
-   JWT_SECRET=tu_secreto_para_jwt
+   DB_HOST=
+   DB_USER=
+   DB_PASSWORD=
+   DB_NAME=
+   JWT_SECRET=
   ```
 
