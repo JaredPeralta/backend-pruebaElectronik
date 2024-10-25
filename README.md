@@ -138,13 +138,183 @@ Para todas las rutas protegidas, se requiere incluir el token JWT en los headers
    ts-node app.ts
 ```
 
-### 6. **Testing**
-
-```markdown
-## Testing
+## **Testing**
 
 El proyecto incluye pruebas unitarias para las rutas principales. Para ejecutarlas, puedes usar el siguiente comando:
 
 ```bash
 npm test
 ```
+
+## Documentación API con Postman
+
+Puedes importar la colección de Postman desde el siguiente archivo:
+[]
+[Prueba-Electronik.postman_collection.json](https://github.com/user-attachments/files/17527574/Prueba-Electronik.postman_collection.json)
+{
+	"info": {
+		"_postman_id": "8166092d-d050-4a63-91f1-5fe4039616dc",
+		"name": "Prueba-Electronik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29281644"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"prueba\",\r\n    \"password\": \"contraseñaValida123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"prueba\",\r\n    \"password\": \"contraseñaValida123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getImagenesFav",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/images/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"images",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posImageFav",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"imageId\": \"id\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/api/images/favorites",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"images",
+						"favorites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteImageFav",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer <token>",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/api/images/favorites/:imageId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"images",
+						"favorites",
+						":imageId"
+					],
+					"variable": [
+						{
+							"key": "imageId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
