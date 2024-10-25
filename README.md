@@ -43,7 +43,7 @@ El backend utiliza una base de datos MySQL con las siguientes tablas:
      ```
    - **Respuesta**: Token JWT para autenticación.
 
-2. **Registro**
+2. **Registro:** La contrasena en el registro debe tener entre 6 y 20 caracteres.
    - **Endpoint**: `/api/auth/register`
    - **Método**: `POST`
    - **Body**:
