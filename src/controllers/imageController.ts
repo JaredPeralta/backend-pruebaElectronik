@@ -8,7 +8,6 @@ import { saveFavoriteToDb, getFavoritesFromDb, deletFavoriteToDb } from '../serv
 export const saveFavorites = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
   const dto = plainToClass(SaveFavoriteDto, req.body);
 
-  // Validar los datos recibidos con el DTO
   const errors = await validate(dto);
   if (errors.length > 0) {
     res.status(400).json({ message: 'Datos inválidos', errors });
@@ -18,7 +17,7 @@ export const saveFavorites = async (req: Request, res: Response, next: NextFunct
   const { imageIds } = dto;
 
   try {
-    const userId = (req as any).user.userId;  // Extraer el userId del token JWT
+    const userId = (req as any).user.userId;
 
     // Guardar cada imagen favorita en la base de datos
     for (const imageId of imageIds) {

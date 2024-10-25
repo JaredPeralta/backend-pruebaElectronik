@@ -12,5 +12,5 @@ export class SaveFavoriteDto {
 export class DeleteFavoriteDto {
   @IsString()
   @IsNotEmpty()
-  imageId!: string;  // El ID de la imagen a eliminar
+  imageId!: string;
 }
