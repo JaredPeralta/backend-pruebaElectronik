@@ -25,5 +25,80 @@ El backend utiliza una base de datos MySQL con las siguientes tablas:
   - `image_id`: Identificador de la imagen guardada.
 
 ### Diagrama de la BD:
-[![image](https://github.com/user-attachments/assets/45c790b1-df21-41fc-ae07-c3c6aae84590)]
+![image](https://github.com/user-attachments/assets/45c790b1-df21-41fc-ae07-c3c6aae84590)
+
+## Documentación del API
+
+### Autenticación
+
+1. **Login**
+   - **Endpoint**: `/api/auth/login`
+   - **Método**: `POST`
+   - **Body**:
+     ```json
+     {
+       "username": "tu_usuario",
+       "password": "tu_contraseña"
+     }
+     ```
+   - **Respuesta**: Token JWT para autenticación.
+
+2. **Registro**
+   - **Endpoint**: `/api/auth/register`
+   - **Método**: `POST`
+   - **Body**:
+     ```json
+     {
+       "username": "tu_usuario",
+       "password": "tu_contraseña"
+     }
+     ```
+
+### Favoritos
+
+1. **Obtener Favoritos del Usuario**
+   - **Endpoint**: `/api/images/favorites`
+   - **Método**: `GET`
+   - **Headers**: 
+     ```json
+     {
+       "Authorization": "Bearer token"
+     }
+     ```
+   - **Respuesta**: Lista de imágenes favoritas.
+
+2. **Agregar a Favoritos**
+   - **Endpoint**: `/api/images/favorites`
+   - **Método**: `POST`
+   - **Headers**: 
+     ```json
+     {
+       "Authorization": "Bearer token"
+     }
+     ```
+   - **Body**:
+     ```json
+     {
+       "imageIds": ["id_imagen_1", "id_imagen_2"]
+     }
+     ```
+
+3. **Eliminar de Favoritos**
+   - **Endpoint**: `/api/images/favorites/:image_id`
+   - **Método**: `DELETE`
+   - **Headers**: 
+     ```json
+     {
+       "Authorization": "Bearer token"
+     }
+     ```
+
+### Notas sobre los Tokens JWT
+
+Para todas las rutas protegidas, se requiere incluir el token JWT en los headers de la petición:
+```json
+{
+  "Authorization": "Bearer <tu_token_jwt>"
+}
+
 
