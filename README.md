@@ -100,5 +100,22 @@ Para todas las rutas protegidas, se requiere incluir el token JWT en los headers
 {
   "Authorization": "Bearer <tu_token_jwt>"
 }
+```
 
+## Despliegue del Proyecto
+
+### Requerimientos Previos
+```
+- Node.js (v14 o superior)
+- PostgreSQL (v12 o superior)
+```
+### Configuración del Entorno
+
+1. Crear un archivo `.env` en la raíz del proyecto con las siguientes variables:
+
+   ```env
+   PORT=5000
+   DATABASE_URL=postgres://usuario:contraseña@localhost:5432/nombre_bd
+   JWT_SECRET=tu_secreto_para_jwt
+  ```
 
