@@ -10,7 +10,7 @@ const db: mysql.Connection = mysql.createConnection({
   user: process.env.DB_USER as string,
   password: process.env.DB_PASSWORD as string,
   database: process.env.DB_NAME as string,
-  //port: process.env.DB_PORT as string,  // Asegúrate de especificar el puerto si lo necesitas
+  //port: process.env.DB_PORT as string,
 });
 
 // Verificar la conexión
